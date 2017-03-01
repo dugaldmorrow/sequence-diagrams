@@ -1,0 +1,18 @@
+{
+  "name": "sequence-diagrams",
+  "version": "0.0.0",
+  "authors": [
+    "Dugald Morrow <dmorrow@atlassian.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-sequence-diagrams": "bramp/js-sequence-diagrams#~2.0.1"
+  }
+}
