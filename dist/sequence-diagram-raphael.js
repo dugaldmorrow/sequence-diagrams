@@ -1425,7 +1425,9 @@ if (typeof Raphael != 'undefined') {
         //  t.attr({'stroke': 'red'});
         //}
       }
-      t.attr({'stroke': 'red'});
+      if (colour) {
+        t.attr({'stroke': colour});
+      }
 
       return t;
     }
