@@ -1201,8 +1201,8 @@ _.extend(BaseTheme.prototype, {
       var y2 = y1 + signal.height - 2 * SIGNAL_MARGIN - SIGNAL_PADDING;
 
       // Draw three lines, the last one with a arrow
-      this.drawLine(aX, y1, aX + SELF_SIGNAL_WIDTH, y1, signal.linetype, SIGNAL_COLOUR);
-      this.drawLine(aX + SELF_SIGNAL_WIDTH, y1, aX + SELF_SIGNAL_WIDTH, y2, signal.linetype, SIGNAL_COLOUR);
+      this.drawLine(aX, y1, aX + SELF_SIGNAL_WIDTH, y1, signal.linetype, undefined, SIGNAL_COLOUR);
+      this.drawLine(aX + SELF_SIGNAL_WIDTH, y1, aX + SELF_SIGNAL_WIDTH, y2, signal.linetype, undefined, SIGNAL_COLOUR);
       this.drawLine(aX + SELF_SIGNAL_WIDTH, y2, aX, y2, signal.linetype, signal.arrowtype, SIGNAL_COLOUR);
     },
 
