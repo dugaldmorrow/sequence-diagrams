@@ -1691,7 +1691,7 @@ if (typeof Raphael != 'undefined') {
      * font (Object)
      * align (string) ALIGN_LEFT or ALIGN_CENTER
      */
-    drawText: function(x, y, text, font, align) {
+    drawText: function(x, y, text, font, align, colour) {
       text = this.cleanText(text);
       font = font || {};
       align = align || ALIGN_LEFT;
@@ -1712,6 +1712,9 @@ if (typeof Raphael != 'undefined') {
         t = paper.text(x - bb.x - bb.width / 2, y - bb.y, text);
         t.attr(font);
         t.attr({'text-anchor': 'start'});
+        if (colour) {
+          t.attr({'stroke': 'red'});
+        }
       }
 
       return t;
