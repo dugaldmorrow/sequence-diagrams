@@ -1712,10 +1712,11 @@ if (typeof Raphael != 'undefined') {
         t = paper.text(x - bb.x - bb.width / 2, y - bb.y, text);
         t.attr(font);
         t.attr({'text-anchor': 'start'});
-        if (colour) {
-          t.attr({'stroke': 'red'});
-        }
+        //if (colour) {
+        //  t.attr({'stroke': 'red'});
+        //}
       }
+      t.attr({'stroke': 'red'});
 
       return t;
     }
