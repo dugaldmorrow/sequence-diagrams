@@ -39,6 +39,9 @@ var LINETYPE  = Diagram.LINETYPE;
 var ARROWTYPE = Diagram.ARROWTYPE;
 
 var SIGNAL_COLOUR = '#0052CC';
+var ACTOR_LINE_COLOUR = '#0049B0';
+var ACTOR_FILL_COLOUR = '#2684FF';
+var ACTOR_TEXT_COLOUR = 'white';
 
 var ALIGN_LEFT   = 0;
 var ALIGN_CENTER = 1;
@@ -350,7 +353,8 @@ _.extend(BaseTheme.prototype, {
       var aX = getCenterX(a);
       this.drawLine(
        aX, y + this.actorsHeight_ - ACTOR_MARGIN,
-       aX, y + this.actorsHeight_ + ACTOR_MARGIN + this.signalsHeight_);
+       aX, y + this.actorsHeight_ + ACTOR_MARGIN + this.signalsHeight_,
+          ACTOR_LINE_COLOUR);
     }, this));
   },
 
@@ -452,7 +456,7 @@ _.extend(BaseTheme.prototype, {
     var h = box.height - 2 * margin;
 
     // Draw inner box
-    this.drawRect(x, y, w, h, '#0052CC', '#2684FF');
+    this.drawRect(x, y, w, h, ACTOR_LINE_COLOUR, ACTOR_FILL_COLOUR);
 
     // Draw text (in the center)
     if (align == ALIGN_CENTER) {
@@ -463,6 +467,6 @@ _.extend(BaseTheme.prototype, {
       y += padding;
     }
 
-    return this.drawText(x, y, text, font, align, 'white');
+    return this.drawText(x, y, text, font, align, ACTOR_TEXT_COLOUR);
   }
 });
