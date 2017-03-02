@@ -1213,7 +1213,7 @@ _.extend(BaseTheme.prototype, {
 
     // Draw the line along the bottom of the signal
     y = offsetY + signal.height - SIGNAL_MARGIN - SIGNAL_PADDING;
-    this.drawLine(aX, y, bX, y, signal.linetype, signal.arrowtype);
+    this.drawLine(aX, y, bX, y, signal.linetype, signal.arrowtype, '#0052CC');
   },
 
   drawNote: function(note, offsetY) {
@@ -1669,13 +1669,16 @@ if (typeof Raphael != 'undefined') {
       return bb;
     },
 
-    drawLine: function(x1, y1, x2, y2, linetype, arrowhead) {
+    drawLine: function(x1, y1, x2, y2, linetype, arrowhead, lineColour) {
       var line = this.paper_.line(x1, y1, x2, y2).attr(LINE);
       if (arrowhead !== undefined) {
         line.attr('arrow-end', this.arrowTypes_[arrowhead] + '-wide-long');
       }
       if (arrowhead !== undefined) {
         line.attr('stroke-dasharray', this.lineTypes_[linetype]);
+      }
+      if (lineColour) {
+          line.attr({'stroke': lineColour});
       }
       return line;
     },

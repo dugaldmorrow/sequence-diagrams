@@ -410,7 +410,7 @@ _.extend(BaseTheme.prototype, {
 
     // Draw the line along the bottom of the signal
     y = offsetY + signal.height - SIGNAL_MARGIN - SIGNAL_PADDING;
-    this.drawLine(aX, y, bX, y, signal.linetype, signal.arrowtype);
+    this.drawLine(aX, y, bX, y, signal.linetype, signal.arrowtype, '#0052CC');
   },
 
   drawNote: function(note, offsetY) {
