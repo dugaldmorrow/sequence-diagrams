@@ -201,7 +201,7 @@ if (typeof Snap != 'undefined') {
      * font (Object)
      * align (string) ALIGN_LEFT or ALIGN_CENTER
      */
-    drawText: function(x, y, text, font, align) {
+    drawText: function(x, y, text, font, align, colour) {
       var t = this.createText(text, font);
       var bb = t.getBBox();
 
@@ -213,6 +213,9 @@ if (typeof Snap != 'undefined') {
       // Now move the text into place
       // `y - bb.y` because text(..) is positioned from the baseline, so this moves it down.
       t.attr({x: x - bb.x, y: y - bb.y});
+      if (colour) {
+          t.attr({'stroke': colour});
+      }
       t.selectAll('tspan').attr({x: x});
 
       this.pushToStack(t);
