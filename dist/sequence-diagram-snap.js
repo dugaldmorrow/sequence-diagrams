@@ -1288,7 +1288,7 @@ if (typeof Snap != 'undefined') {
   var RECT = {
         'stroke': '#000000',
         'stroke-width': 2,
-        'fill': '#fff'
+        'fill': '#0052CC'
       };
 
   var LOADED_FONTS = {};
