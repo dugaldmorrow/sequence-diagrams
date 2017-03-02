@@ -1390,7 +1390,7 @@ if (typeof Raphael != 'undefined') {
     },
 
     drawRect: function(x, y, w, h) {
-      return this.paper_.rect(x, y, w, h).attr(RECT);
+      return this.paper_.rect(x, y, w, h, 6, 6).attr(RECT);
     },
 
     /**

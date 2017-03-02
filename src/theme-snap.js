@@ -190,7 +190,7 @@ if (typeof Snap != 'undefined') {
     },
 
     drawRect: function(x, y, w, h) {
-      var rect = this.paper_.rect(x, y, w, h, 6, 6).attr(RECT);
+      var rect = this.paper_.rect(x, y, w, h).attr(RECT);
       return this.pushToStack(rect);
     },
 
@@ -278,7 +278,7 @@ if (typeof Snap != 'undefined') {
     },
 
     drawRect: function(x, y, w, h) {
-      var rect = this.paper_.path(handRect(x, y, w, h, 6, 6)).attr(RECT);
+      var rect = this.paper_.path(handRect(x, y, w, h)).attr(RECT);
       return this.pushToStack(rect);
     }
   });
