@@ -841,6 +841,8 @@ var PLACEMENT = Diagram.PLACEMENT;
 var LINETYPE  = Diagram.LINETYPE;
 var ARROWTYPE = Diagram.ARROWTYPE;
 
+var SIGNAL_COLOUR = '#0052CC';
+
 var ALIGN_LEFT   = 0;
 var ALIGN_CENTER = 1;
 
@@ -1195,9 +1197,9 @@ _.extend(BaseTheme.prototype, {
       var y2 = y1 + signal.height - 2 * SIGNAL_MARGIN - SIGNAL_PADDING;
 
       // Draw three lines, the last one with a arrow
-      this.drawLine(aX, y1, aX + SELF_SIGNAL_WIDTH, y1, signal.linetype);
-      this.drawLine(aX + SELF_SIGNAL_WIDTH, y1, aX + SELF_SIGNAL_WIDTH, y2, signal.linetype);
-      this.drawLine(aX + SELF_SIGNAL_WIDTH, y2, aX, y2, signal.linetype, signal.arrowtype);
+      this.drawLine(aX, y1, aX + SELF_SIGNAL_WIDTH, y1, signal.linetype, SIGNAL_COLOUR);
+      this.drawLine(aX + SELF_SIGNAL_WIDTH, y1, aX + SELF_SIGNAL_WIDTH, y2, signal.linetype, SIGNAL_COLOUR);
+      this.drawLine(aX + SELF_SIGNAL_WIDTH, y2, aX, y2, signal.linetype, signal.arrowtype, SIGNAL_COLOUR);
     },
 
   drawSignal: function(signal, offsetY) {
@@ -1213,7 +1215,7 @@ _.extend(BaseTheme.prototype, {
 
     // Draw the line along the bottom of the signal
     y = offsetY + signal.height - SIGNAL_MARGIN - SIGNAL_PADDING;
-    this.drawLine(aX, y, bX, y, signal.linetype, signal.arrowtype, '#0052CC');
+    this.drawLine(aX, y, bX, y, signal.linetype, signal.arrowtype, SIGNAL_COLOUR);
   },
 
   drawNote: function(note, offsetY) {
