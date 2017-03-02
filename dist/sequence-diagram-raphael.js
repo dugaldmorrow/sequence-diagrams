@@ -1287,7 +1287,7 @@ if (typeof Raphael != 'undefined') {
   var RECT = {
         'stroke': '#000000',
         'stroke-width': 2,
-        'fill': '#fff'
+        'fill': '#0052CC'
       };
 
   /******************
