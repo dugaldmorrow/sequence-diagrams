@@ -1399,7 +1399,7 @@ if (typeof Raphael != 'undefined') {
     },
 
     drawRect: function(x, y, w, h, strokeColour, fillColour) {
-      var rect = this.paper_.rect(x, y, w, h, 6, 6).attr(RECT);
+      var rect = this.paper_.rect(x, y, w, h, 4, 4).attr(RECT);
       if (strokeColour) {
         rect.attr({'stroke': strokeColour});
       }
