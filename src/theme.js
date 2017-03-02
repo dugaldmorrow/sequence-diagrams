@@ -461,6 +461,6 @@ _.extend(BaseTheme.prototype, {
       y += padding;
     }
 
-    return this.drawText(x, y, text, font, align, 'green');
+    return this.drawText(x, y, text, font, align, 'white');
   }
 });
