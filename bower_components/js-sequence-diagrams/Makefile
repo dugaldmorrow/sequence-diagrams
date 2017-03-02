@@ -38,7 +38,7 @@ lint: dependencies package.json bower.json
 	$(NODE_MODULES)/jsonlint package.json -q
 	$(NODE_MODULES)/jsonlint bower.json -q
 
-	$(NODE_MODULES)/jsonlint .jscsrc -q
+	#$(NODE_MODULES)/jsonlint .jscsrc -q
 	$(NODE_MODULES)/jscs --fix src/*.js
 	$(NODE_MODULES)/jscs --fix test/*.js
 
