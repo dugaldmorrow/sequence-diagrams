@@ -118,8 +118,15 @@ if (typeof Raphael != 'undefined') {
       return line;
     },
 
-    drawRect: function(x, y, w, h) {
-      return this.paper_.rect(x, y, w, h, 6, 6).attr(RECT);
+    drawRect: function(x, y, w, h, strokeColour, fillColour) {
+      var rect = this.paper_.rect(x, y, w, h, 6, 6).attr(RECT);
+      if (strokeColour) {
+        rect.attr({'stroke': strokeColour});
+      }
+      if (fillColour) {
+          rect.attr({'fill': fillColour});
+      }
+      return rect;
     },
 
     /**

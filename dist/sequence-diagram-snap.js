@@ -1253,7 +1253,7 @@ _.extend(BaseTheme.prototype, {
     var h = box.height - 2 * margin;
 
     // Draw inner box
-    this.drawRect(x, y, w, h);
+    this.drawRect(x, y, w, h, '#0052CC', '#2684FF');
 
     // Draw text (in the center)
     if (align == ALIGN_CENTER) {

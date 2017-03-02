@@ -1253,7 +1253,7 @@ _.extend(BaseTheme.prototype, {
     var h = box.height - 2 * margin;
 
     // Draw inner box
-    this.drawRect(x, y, w, h);
+    this.drawRect(x, y, w, h, '#0052CC', '#2684FF');
 
     // Draw text (in the center)
     if (align == ALIGN_CENTER) {
@@ -1389,8 +1389,15 @@ if (typeof Raphael != 'undefined') {
       return line;
     },
 
-    drawRect: function(x, y, w, h) {
-      return this.paper_.rect(x, y, w, h, 6, 6).attr(RECT);
+    drawRect: function(x, y, w, h, strokeColour, fillColour) {
+      var rect = this.paper_.rect(x, y, w, h, 6, 6).attr(RECT);
+      if (strokeColour) {
+        rect.attr({'stroke': strokeColour});
+      }
+      if (fillColour) {
+          rect.attr({'fill': fillColour});
+      }
+      return rect;
     },
 
     /**
