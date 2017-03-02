@@ -1157,7 +1157,7 @@ _.extend(BaseTheme.prototype, {
       this.drawLine(
        aX, y + this.actorsHeight_ - ACTOR_MARGIN,
        aX, y + this.actorsHeight_ + ACTOR_MARGIN + this.signalsHeight_,
-          undefined, ACTOR_LINE_COLOUR);
+          undefined, undefined, ACTOR_LINE_COLOUR);
     }, this));
   },
 
@@ -1389,7 +1389,7 @@ if (typeof Raphael != 'undefined') {
       if (arrowhead !== undefined) {
         line.attr('arrow-end', this.arrowTypes_[arrowhead] + '-wide-long');
       }
-      if (arrowhead !== undefined) {
+      if (linetype !== undefined) {
         line.attr('stroke-dasharray', this.lineTypes_[linetype]);
       }
       if (lineColour) {

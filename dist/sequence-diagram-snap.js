@@ -1157,7 +1157,7 @@ _.extend(BaseTheme.prototype, {
       this.drawLine(
        aX, y + this.actorsHeight_ - ACTOR_MARGIN,
        aX, y + this.actorsHeight_ + ACTOR_MARGIN + this.signalsHeight_,
-          undefined, ACTOR_LINE_COLOUR);
+          undefined, undefined, ACTOR_LINE_COLOUR);
     }, this));
   },
 

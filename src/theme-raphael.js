@@ -112,7 +112,7 @@ if (typeof Raphael != 'undefined') {
       if (arrowhead !== undefined) {
         line.attr('arrow-end', this.arrowTypes_[arrowhead] + '-wide-long');
       }
-      if (arrowhead !== undefined) {
+      if (linetype !== undefined) {
         line.attr('stroke-dasharray', this.lineTypes_[linetype]);
       }
       if (lineColour) {
