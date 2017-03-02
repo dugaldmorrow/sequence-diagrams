@@ -342,7 +342,7 @@ _.extend(BaseTheme.prototype, {
       this.drawActor(a, y, this.actorsHeight_);
 
       // Bottom box
-      this.drawActor(a, y + this.actorsHeight_ + this.signalsHeight_, this.actorsHeight_);
+      //this.drawActor(a, y + this.actorsHeight_ + this.signalsHeight_, this.actorsHeight_);
 
       // Veritical line
       var aX = getCenterX(a);
